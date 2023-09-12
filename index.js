@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 // The `body-parser` library helps us parse the HTTP request body and provide
 // it to our routes as a javascript object
 const bodyParser = require('body-parser')
@@ -6,9 +7,10 @@ const bodyParser = require('body-parser')
 // we created in `routes.js`
 const { init } = require('./db')
 const routes = require('./routes')
-
 // Create a new express app
 const app = express()
+app.use(cors({ origin: 'http://localhost:3000' }))
+
 // Add the body parses middleware, as well as the HTTP routes
 app.use(bodyParser.json())
 app.use(routes)

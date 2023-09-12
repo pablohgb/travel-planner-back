@@ -30,9 +30,10 @@ const insertItem = (item) => {
 }
 
 // get all items from the "items" collection
-const getItems = () => {
+const login = (item) => {
     const collection = db.collection('users')
-    return collection.find({}).toArray()
+    //const username = item.username
+    return collection.findOne({ item })
 }
 
 // take the id and the quantity to add as arguments, and increase the
@@ -43,4 +44,4 @@ const updateQuantity = (id, quantity) => {
 }
 
 // export the required functions so that we can use them elsewhere
-module.exports = { init, insertItem, getItems, updateQuantity }
+module.exports = { init, insertItem, login, updateQuantity }
