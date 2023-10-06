@@ -1,0 +1,820 @@
+{
+  "paises": [
+    {
+      "nombre": "Argentina",
+      "ciudades": [
+        "Buenos Aires",
+        "Córdoba",
+        "Rosario",
+        "Mendoza",
+        "La Plata",
+        "San Miguel de Tucumán",
+        "Mar del Plata",
+        "Salta",
+        "Santa Fe",
+        "San Juan",
+        "Resistencia"
+      ]
+    },
+    {
+      "nombre": "Brasil",
+      "ciudades": [
+        "Sao Paulo",
+        "Río de Janeiro",
+        "Salvador",
+        "Fortaleza",
+        "Belo Horizonte",
+        "Manaus",
+        "Curitiba",
+        "Recife",
+        "Porto Alegre",
+        "Brasilia",
+        "Campinas"
+      ]
+    },
+    {
+      "nombre": "Estados Unidos",
+      "ciudades": [
+        "Nueva York",
+        "Los Ángeles",
+        "Chicago",
+        "Houston",
+        "Phoenix",
+        "Philadelphia",
+        "San Antonio",
+        "San Diego",
+        "Dallas",
+        "San Jose",
+        "Austin"
+      ]
+    },
+    {
+      "nombre": "México",
+      "ciudades": [
+        "Ciudad de México",
+        "Guadalajara",
+        "Monterrey",
+        "Puebla",
+        "Tijuana",
+        "León",
+        "Juárez",
+        "Zapopan",
+        "Nezahualcóyotl",
+        "Mexicali",
+        "Culiacán"
+      ]
+    },
+    {
+      "nombre": "Canadá",
+      "ciudades": [
+        "Toronto",
+        "Vancouver",
+        "Montreal",
+        "Calgary",
+        "Edmonton",
+        "Ottawa",
+        "Mississauga",
+        "Winnipeg",
+        "Québec",
+        "Hamilton",
+        "London"
+      ]
+    },
+    {
+      "nombre": "España",
+      "ciudades": [
+        "Madrid",
+        "Barcelona",
+        "Valencia",
+        "Sevilla",
+        "Zaragoza",
+        "Málaga",
+        "Murcia",
+        "Palma de Mallorca",
+        "Las Palmas de Gran Canaria",
+        "Bilbao",
+        "Alicante"
+      ]
+    },
+    {
+      "nombre": "Francia",
+      "ciudades": [
+        "París",
+        "Marsella",
+        "Lyon",
+        "Toulouse",
+        "Niza",
+        "Nantes",
+        "Estrasburgo",
+        "Montpellier",
+        "Burdeos",
+        "Lille",
+        "Rennes"
+      ]
+    },
+    {
+      "nombre": "Italia",
+      "ciudades": [
+        "Roma",
+        "Milán",
+        "Venecia",
+        "Nápoles",
+        "Turín",
+        "Palermo",
+        "Génova",
+        "Bolonia",
+        "Florencia",
+        "Bari",
+        "Catania"
+      ]
+    },
+    {
+      "nombre": "Alemania",
+      "ciudades": [
+        "Berlín",
+        "Múnich",
+        "Hamburgo",
+        "Colonia",
+        "Fráncfort del Meno",
+        "Stuttgart",
+        "Düsseldorf",
+        "Dortmund",
+        "Essen",
+        "Leipzig",
+        "Dresde"
+      ]
+    },
+    {
+      "nombre": "China",
+      "ciudades": [
+        "Pekín",
+        "Shanghái",
+        "Hong Kong",
+        "Cantón",
+        "Shenzhen",
+        "Tianjin",
+        "Wuhan",
+        "Chongqing",
+        "Chengdú",
+        "Nankín",
+        "Xian"
+      ]
+    },
+    {
+      "nombre": "Japón",
+      "ciudades": [
+        "Tokio",
+        "Kioto",
+        "Osaka",
+        "Yokohama",
+        "Nagoya",
+        "Sapporo",
+        "Fukuoka",
+        "Kobe",
+        "Kawasaki",
+        "Hiroshima",
+        "Sendai"
+      ]
+    },
+    {
+      "nombre": "Corea del Sur",
+      "ciudades": [
+        "Seúl",
+        "Busan",
+        "Incheon",
+        "Daegu",
+        "Daejeon",
+        "Gwangju",
+        "Suwon",
+        "Ulsan",
+        "Seongnam",
+        "Goyang",
+        "Cheonan"
+      ]
+    },
+    {
+      "nombre": "Australia",
+      "ciudades": [
+        "Sídney",
+        "Melbourne",
+        "Brisbane",
+        "Perth",
+        "Adelaida",
+        "Gold Coast",
+        "Canberra",
+        "Newcastle",
+        "Wollongong",
+        "Sunshine Coast",
+        "Hobart"
+      ]
+    },
+    {
+      "nombre": "India",
+      "ciudades": [
+        "Nueva Delhi",
+        "Mumbai",
+        "Bangalore",
+        "Chennai",
+        "Kolkata",
+        "Hyderabad",
+        "Pune",
+        "Ahmedabad",
+        "Surat",
+        "Jaipur",
+        "Lucknow"
+      ]
+    },
+    {
+      "nombre": "Rusia",
+      "ciudades": [
+        "Moscú",
+        "San Petersburgo",
+        "Novosibirsk",
+        "Ekaterimburgo",
+        "Nizhni Nóvgorod",
+        "Kazán",
+        "Chelyabinsk",
+        "Omsk",
+        "Samara",
+        "Rostov del Don",
+        "Ufá"
+      ]
+    },
+    {
+      "nombre": "Reino Unido",
+      "ciudades": [
+        "Londres",
+        "Manchester",
+        "Edimburgo",
+        "Birmingham",
+        "Glasgow",
+        "Leeds",
+        "Liverpool",
+        "Newcastle upon Tyne",
+        "Sheffield",
+        "Bristol",
+        "Cardiff"
+      ]
+    },
+    {
+      "nombre": "Sudáfrica",
+      "ciudades": [
+        "Ciudad del Cabo",
+        "Johannesburgo",
+        "Durban",
+        "Pretoria",
+        "Port Elizabeth",
+        "Bloemfontein",
+        "East London",
+        "Pietermaritzburg",
+        "Benoni",
+        "Soweto",
+        "Stellenbosch"
+      ]
+    },
+    {
+      "nombre": "Colombia",
+      "ciudades": [
+        "Bogotá",
+        "Medellín",
+        "Cali",
+        "Barranquilla",
+        "Cartagena",
+        "Cúcuta",
+        "Soledad",
+        "Ibagué",
+        "Bucaramanga",
+        "Villavicencio",
+        "Santa Marta"
+      ]
+    },
+    {
+      "nombre": "Perú",
+      "ciudades": [
+        "Lima",
+        "Cusco",
+        "Arequipa",
+        "Trujillo",
+        "Chiclayo",
+        "Piura",
+        "Iquitos",
+        "Huancayo",
+        "Chimbote",
+        "Tacna",
+        "Ica"
+      ]
+    },
+    {
+      "nombre": "Chile",
+      "ciudades": [
+        "Santiago",
+        "Valparaíso",
+        "Viña del Mar",
+        "Concepción",
+        "La Serena",
+        "Antofagasta",
+        "Temuco",
+        "Rancagua",
+        "Talca",
+        "Arica",
+        "Iquique"
+      ]
+    },
+    {
+      "nombre": "Ecuador",
+      "ciudades": [
+        "Quito",
+        "Guayaquil",
+        "Cuenca",
+        "Santo Domingo",
+        "Machala",
+        "Durán",
+        "Manta",
+        "Portoviejo",
+        "Ambato",
+        "Riobamba",
+        "Quevedo"
+      ]
+    },
+    {
+      "nombre": "Venezuela",
+      "ciudades": [
+        "Caracas",
+        "Maracaibo",
+        "Valencia",
+        "Barquisimeto",
+        "Maracay",
+        "Ciudad Guayana",
+        "Barcelona",
+        "Maturín",
+        "San Cristóbal",
+        "Ciudad Bolívar",
+        "Cumaná"
+      ]
+    },
+    {
+      "nombre": "Costa Rica",
+      "ciudades": [
+        "San José",
+        "Liberia",
+        "Limón",
+        "Alajuela",
+        "Heredia",
+        "Cartago",
+        "Puntarenas",
+        "San Francisco",
+        "San Isidro",
+        "Curridabat",
+        "San Vicente"
+      ]
+    },
+    {
+      "nombre": "Panamá",
+      "ciudades": [
+        "Ciudad de Panamá",
+        "Colón",
+        "David",
+        "La Chorrera",
+        "San Miguelito",
+        "Tocumen",
+        "Arraiján",
+        "Las Cumbres",
+        "Panamá Oeste",
+        "Santiago de Veraguas",
+        "Chitré"
+      ]
+    },
+    {
+      "nombre": "Honduras",
+      "ciudades": [
+        "Tegucigalpa",
+        "San Pedro Sula",
+        "La Ceiba",
+        "Choloma",
+        "Comayagua",
+        "Choluteca",
+        "El Progreso",
+        "La Lima",
+        "Danlí",
+        "Juticalpa",
+        "Puerto Cortés"
+      ]
+    },
+    {
+      "nombre": "El Salvador",
+      "ciudades": [
+        "San Salvador",
+        "Santa Ana",
+        "San Miguel",
+        "Apopa",
+        "Soyapango",
+        "Mejicanos",
+        "La Libertad",
+        "Santa Tecla",
+        "San Marcos",
+        "San Martín",
+        "Ilopango"
+      ]
+    },
+    {
+      "nombre": "Guatemala",
+      "ciudades": [
+        "Ciudad de Guatemala",
+        "Quetzaltenango",
+        "Escuintla",
+        "Mixco",
+        "Villa Nueva",
+        "San Juan Sacatepéquez",
+        "Petapa",
+        "San Pedro Sacatepéquez",
+        "Chimaltenango",
+        "Chinautla",
+        "Huehuetenango"
+      ]
+    },
+    {
+      "nombre": "Nicaragua",
+      "ciudades": [
+        "Managua",
+        "León",
+        "Masaya",
+        "Matagalpa",
+        "Chinandega",
+        "Granada",
+        "Estelí",
+        "Ciudad Sandino",
+        "Juigalpa",
+        "Jinotega",
+        "Bluefields"
+      ]
+    },
+    {
+      "nombre": "Cuba",
+      "ciudades": [
+        "La Habana",
+        "Santiago de Cuba",
+        "Camagüey",
+        "Holguín",
+        "Santa Clara",
+        "Guantánamo",
+        "Bayamo",
+        "Cienfuegos",
+        "Pinar del Río",
+        "Matanzas",
+        "Ciego de Ávila"
+      ]
+    },
+    {
+      "nombre": "República Dominicana",
+      "ciudades": [
+        "Santo Domingo",
+        "Santiago de los Caballeros",
+        "Punta Cana",
+        "San Pedro de Macorís",
+        "La Romana",
+        "San Cristóbal",
+        "Higüey",
+        "La Vega",
+        "San Francisco de Macorís",
+        "Haina",
+        "Moca"
+      ]
+    },
+    {
+      "nombre": "Puerto Rico",
+      "ciudades": [
+        "San Juan",
+        "Bayamón",
+        "Carolina",
+        "Ponce",
+        "Caguas",
+        "Guaynabo",
+        "Mayagüez",
+        "Toa Baja",
+        "Trujillo Alto",
+        "Arecibo",
+        "Fajardo"
+      ]
+    },
+    {
+      "nombre": "Bolivia",
+      "ciudades": [
+        "La Paz",
+        "Santa Cruz",
+        "Cochabamba",
+        "Sucre",
+        "Oruro",
+        "Tarija",
+        "Potosí",
+        "Sacaba",
+        "Montero",
+        "Quillacollo",
+        "Trinidad"
+      ]
+    },
+    {
+      "nombre": "Paraguay",
+      "ciudades": [
+        "Asunción",
+        "Ciudad del Este",
+        "Encarnación",
+        "San Lorenzo",
+        "Luque",
+        "Capiatá",
+        "Lambaré",
+        "Fernando de la Mora",
+        "Limpio",
+        "Ñemby",
+        "Mariano Roque Alonso"
+      ]
+    },
+    {
+      "nombre": "Uruguay",
+      "ciudades": [
+        "Montevideo",
+        "Punta del Este",
+        "Salto",
+        "Ciudad de la Costa",
+        "Salinas",
+        "Las Piedras",
+        "Rivera",
+        "Maldonado",
+        "Tacuarembó",
+        "Melo",
+        "Mercedes"
+      ]
+    },
+    {
+      "nombre": "Guinea Ecuatorial",
+      "ciudades": [
+        "Malabo",
+        "Bata",
+        "Ebebiyín",
+        "Aconibe",
+        "Mongomo",
+        "Evinayong",
+        "Luba",
+        "Mikomeseng",
+        "Rebola",
+        "Cogo",
+        "Anisoc"
+      ]
+    },
+    {
+      "nombre": "Angola",
+      "ciudades": [
+        "Luanda",
+        "Lobito",
+        "Huambo",
+        "Benguela",
+        "Kuito",
+        "Lubango",
+        "Malanje",
+        "Namibe",
+        "Soyo",
+        "Cabinda",
+        "Uíge"
+      ]
+    },
+    {
+      "nombre": "Mozambique",
+      "ciudades": [
+        "Maputo",
+        "Matola",
+        "Beira",
+        "Nampula",
+        "Chimoio",
+        "Nacala",
+        "Quelimane",
+        "Tete",
+        "Xai-Xai",
+        "Maxixe",
+        "Lichinga"
+      ]
+    },
+    {
+      "nombre": "Kenia",
+      "ciudades": [
+        "Nairobi",
+        "Mombasa",
+        "Kisumu",
+        "Nakuru",
+        "Eldoret",
+        "Nyeri",
+        "Meru",
+        "Embu",
+        "Kisii",
+        "Machakos",
+        "Thika"
+      ]
+    },
+    {
+      "nombre": "Tanzania",
+      "ciudades": [
+        "Dar es Salaam",
+        "Mwanza",
+        "Arusha",
+        "Dodoma",
+        "Mbeya",
+        "Morogoro",
+        "Tanga",
+        "Kahama",
+        "Tabora",
+        "Zanzíbar",
+        "Kigoma"
+      ]
+    },
+    {
+      "nombre": "Etiopía",
+      "ciudades": [
+        "Addis Abeba",
+        "Dire Dawa",
+        "Gondar",
+        "Mek'ele",
+        "Adama",
+        "Awasa",
+        "Jimma",
+        "Bahir Dar",
+        "Hawassa",
+        "Dessie",
+        "Jijiga"
+      ]
+    },
+    {
+      "nombre": "Namibia",
+      "ciudades": [
+        "Windhoek",
+        "Walvis Bay",
+        "Swakopmund",
+        "Rundu",
+        "Oshakati",
+        "Katima Mulilo",
+        "Rehoboth",
+        "Otjiwarongo",
+        "Okahandja",
+        "Grootfontein",
+        "Keetmanshoop"
+      ]
+    },
+    {
+      "nombre": "Nigeria",
+      "ciudades": [
+        "Lagos",
+        "Abuja",
+        "Kano",
+        "Ibadan",
+        "Kaduna",
+        "Port Harcourt",
+        "Benin City",
+        "Maiduguri",
+        "Zaria",
+        "Aba",
+        "Jos"
+      ]
+    },
+    {
+      "nombre": "Ghana",
+      "ciudades": [
+        "Acra",
+        "Kumasi",
+        "Tamale",
+        "Takoradi",
+        "Sunyani",
+        "Cape Coast",
+        "Sekondi-Takoradi",
+        "Ho",
+        "Wa",
+        "Koforidua",
+        "Techiman"
+      ]
+    },
+    {
+      "nombre": "Uganda",
+      "ciudades": [
+        "Kampala",
+        "Gulu",
+        "Lira",
+        "Mbarara",
+        "Jinja",
+        "Bwizibwera",
+        "Mbale",
+        "Mukono",
+        "Kasese",
+        "Masaka",
+        "Entebbe"
+      ]
+    },
+    {
+      "nombre": "Mauricio",
+      "ciudades": [
+        "Port Louis",
+        "Beau Bassin-Rose Hill",
+        "Vacoas-Phoenix",
+        "Curepipe",
+        "Quatre Bornes",
+        "Triolet",
+        "Goodlands",
+        "Centre de Flacq",
+        "Bel Air Rivière Sèche",
+        "Mahebourg",
+        "Saint Pierre"
+      ]
+    },
+    {
+      "nombre": "Zimbabwe",
+      "ciudades": [
+        "Harare",
+        "Bulawayo",
+        "Chitungwiza",
+        "Mutare",
+        "Gweru",
+        "Epworth",
+        "Kwekwe",
+        "Kadoma",
+        "Masvingo",
+        "Chinhoyi",
+        "Marondera"
+      ]
+    },
+    {
+      "nombre": "Egipto",
+      "ciudades": [
+        "El Cairo",
+        "Alejandría",
+        "Giza",
+        "Shubra El-Kheima",
+        "Port Said",
+        "Suez",
+        "Luxor",
+        "El-Mahalla El-Kubra",
+        "Asyut",
+        "Tanta",
+        "Mansoura"
+      ]
+    },
+    {
+      "nombre": "Sudán",
+      "ciudades": [
+        "Jartum",
+        "Omdurmán",
+        "Khartoum Bahri",
+        "Port Sudan",
+        "Nyala",
+        "Kassala",
+        "Al-Ubayyid",
+        "Kosti",
+        "Wad Madani",
+        "El Obeid",
+        "El Daein"
+      ]
+    },
+    {
+      "nombre": "Marruecos",
+      "ciudades": [
+        "Casablanca",
+        "Rabat",
+        "Fez",
+        "Tánger",
+        "Marrakech",
+        "Salé",
+        "Meknès",
+        "Oujda",
+        "Kenitra",
+        "Agadir",
+        "Tétouan"
+      ]
+    },
+    {
+      "nombre": "Argelia",
+      "ciudades": [
+        "Argel",
+        "Orán",
+        "Constantina",
+        "Annaba",
+        "Blida",
+        "Batna",
+        "Djelfa",
+        "Sétif",
+        "Sidi Bel Abbès",
+        "Biskra",
+        "Tébessa"
+      ]
+    },
+    {
+      "nombre": "Túnez",
+      "ciudades": [
+        "Túnez",
+        "Sfax",
+        "Susah",
+        "Kairouan",
+        "Bizerte",
+        "Gabes",
+        "Ariana",
+        "Kasserine",
+        "Gafsa",
+        "La Goulette",
+        "Ben Arous"
+      ]
+    }
+  ]
+}
