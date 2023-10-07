@@ -37,6 +37,15 @@ router.post('/login', async (req, res) => {
 
 })
 router.post('/', async (req, res) => {
+    try {
+        const existingUser = await User.findOne({ email: req.body.email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'Email already exists' });
+        }
+    } catch (error) {
+        return res.status(500).json({ message: 'Internal Server Error' });
+    }
+
     const hash = await bcrypt.hash(req.body.password, saltRounds)
     const user = new User({
         email: req.body.email,
