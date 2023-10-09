@@ -1,8 +1,11 @@
+require('dotenv').config()
 const express = require('express')
+const jwt = require('jsonwebtoken')
 const router = express.Router()
 const User = require('../models/user.model')
 const bcrypt = require("bcrypt")
 const saltRounds = 10
+
 
 router.get('/', async (req, res) => {
     try {
@@ -18,18 +21,20 @@ router.get('/:id', getUser, (req, res) => {
 
 router.post('/login', async (req, res) => {
     const email = req.body.email
+    const user = await User.findOne({ email: email })
+    console.log(user)
+    if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+    }
     try {
-
-        const user = await User.findOne({ email: email })
-        console.log(user)
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-        if (bcrypt.compare(user.password, req.body.password)) {
-            console.log("Hola")
-            res.send(user)
+        if (await bcrypt.compare(req.body.password, user.password)) {
+            userData = { id: user._id, email: user.email }
+            const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET)
+            console.log(accessToken)
+            res.status(200).send(accessToken)
         } else {
             console.log("funciona")
+            res.status(401).send("email or password incorrect")
         }
     } catch (error) {
         res.status(401).json({ message: error.message })
@@ -53,7 +58,10 @@ router.post('/', async (req, res) => {
     })
     try {
         const newUser = await user.save()
-        res.status(201).json(newUser)
+        userData = { id: user._id, email: user.email }
+        const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET)
+        console.log(accessToken)
+        res.status(200).send(accessToken)
     } catch (error) {
         res.status(400).json({ message: error.message })
     }
@@ -96,5 +104,6 @@ async function getUser(req, res, next) {
     console.log(user)
     next();
 }
+
 
 module.exports = router
