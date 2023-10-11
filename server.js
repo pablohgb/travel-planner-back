@@ -22,6 +22,10 @@ const userRouter = require('./routes/user.routes')
 app.use('/user', userRouter)
 const travelRouter = require('./routes/travels.routes')
 app.use('/travel', travelRouter)
+const countryRouter = require('./routes/countries.routes')
+app.use('/countries', countryRouter)
+const cityRouter = require('./routes/cities.routes')
+app.use('/cities', cityRouter)
 
 
 app.listen(6500, () => console.log("server started in port 6500"))
