@@ -2,11 +2,27 @@ const express = require('express')
 const router = express.Router()
 const Travel = require('../models/travel.model')
 const TravelCities = require('../models/travel-cities.model')
+const authenticateToken = require('../middleware/authMiddleware')
 
-router.post('/create-travel', async (req, res) => {
+
+router.post('/travel-page', authenticateToken, async (req, res) => {
+    console.log("pipi")
     try {
-        const { travelName, people, country, user, cities } = req.body;
-
+        console.log("hola")
+        const travel = await Travel.find({ user: req.info.id })
+        if (!travel) {
+            return res.status(404).json({ message: "You have no travels yet" })
+        }
+        console.log(travel)
+        res.status(200).json(travel)
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+router.post('/create-travel', authenticateToken, async (req, res) => {
+    try {
+        const { travelName, people, country, token, cities } = req.body;
+        const user = req.info.id
         const travel = new Travel({
             travelName,
             people,
@@ -94,13 +110,12 @@ router.delete('/delete-travel/:id', async (req, res) => {
     }
 });
 
-router.delete('/delete-travel-city/:travelId/:cityId', async (req, res) => {
+router.delete('/delete-travel-city/:travelId', async (req, res) => {
     try {
-        const { travelId, cityId } = req.params;
+        const { travelId } = req.params;
 
         const deletedTravelCity = await TravelCities.findOneAndDelete({
-            travel: travelId,
-            city: cityId
+            travel: travelId
         });
 
         if (!deletedTravelCity) {

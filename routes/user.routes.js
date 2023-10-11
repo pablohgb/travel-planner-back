@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
         userData = { id: user._id, email: user.email }
         const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET)
         console.log(accessToken)
-        res.status(200).send(accessToken)
+        res.status(200).json(accessToken)
     } catch (error) {
         res.status(400).json({ message: error.message })
     }
