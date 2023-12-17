@@ -2,19 +2,45 @@ const express = require('express')
 const router = express.Router()
 const Travel = require('../models/travel.model')
 const TravelCities = require('../models/travel-cities.model')
-const authenticateToken = require('../middleware/authMiddleware')
+const { authenticateToken, authenticateTokenParams } = require('../middleware/authMiddleware')
+const Country = require('../models/countries.model')
 
 
-router.post('/travel-page', authenticateToken, async (req, res) => {
-    console.log("pipi")
+router.get('/travel-page/:token', authenticateTokenParams, async (req, res) => {
     try {
-        console.log("hola")
         const travel = await Travel.find({ user: req.info.id })
+        console.log(travel)
         if (!travel) {
             return res.status(404).json({ message: "You have no travels yet" })
         }
+        const travelData = [{}]
+        for (i = 0; i < travel.length; i++) {
+            const country = await Country.findById(travel.country)
+            const citiesAndDays = await TravelCities.find({ travel: travel[i]._id })
+            //            const cities = [{}]
+            // for (j=0; j<citiesAndDays.length; j++) {
+            //     const city =
+            //     cities[j]= {
+            //         city: citiesAndDays[j].city
+            //     }
+            // }
+            travelData[i] = {
+                id: travel[i]._id,
+                travelName: travel[i].travelName,
+                people: travel[i].people,
+                country: country,
+                cities: citiesAndDays
+            }
+        }
+        // const travelData = {
+        //     id: travel._id,
+        //     travelName: travel.travelName,
+        //     people: travel.people,
+        //     country: country,
+        //     citiesAndDays
+        // }
         console.log(travel)
-        res.status(200).json(travel)
+        res.status(200).json(travelData)
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
