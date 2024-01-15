@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 
 function authenticateToken(req, res, next) {
+    console.log("jeje")
+
     const authHeader = req.body.token;
     const token = authHeader;
     if (token == null) {
@@ -18,6 +20,7 @@ function authenticateToken(req, res, next) {
 function authenticateTokenParams(req, res, next) {
     const authHeader = req.params.token;
     const token = authHeader;
+    console.log("jeje")
     if (token == null) {
         return res.sendStatus(401);
     }
@@ -31,4 +34,17 @@ function authenticateTokenParams(req, res, next) {
     });
 }
 
-module.exports = { authenticateToken, authenticateTokenParams };
+async function getUser(req, res, next) {
+    let user;
+    try {
+        user = await User.findById(req.params.id);
+
+    } catch (error) {
+        return res.status(500).json({ message: error.message })
+    }
+    res.user = user;
+    console.log(user)
+    next();
+}
+
+module.exports = { authenticateToken, authenticateTokenParams, getUser };

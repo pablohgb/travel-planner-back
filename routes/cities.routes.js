@@ -1,16 +1,10 @@
-const express = require('express')
-const router = express.Router()
-const City = require('../models/cities.model')
+const Router = require("express");
+const cityRouter = Router();
+const getCountry = require("../controllers/cities.controllers");
 
 
-router.get('/:countryId', async (req, res) => {
 
-    try {
-        const cities = await City.find({ country: req.params.countryId })
-        res.json(cities)
-    } catch (error) {
-        res.status(500).json({ message: error.message })
-    }
-})
+cityRouter
+    .get('/:id', getCountry)
 
-module.exports = router
+module.exports = cityRouter;
