@@ -7,8 +7,8 @@ const mongoose = require('mongoose')
 
 
 // MongoDB connection URL
-const mongoURL = ''; // Replace with your MongoDB URL
-const dbName = 'travel-planner'; // Replace with your database name
+const mongoURL = '';
+const dbName = 'travel-planner';
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
