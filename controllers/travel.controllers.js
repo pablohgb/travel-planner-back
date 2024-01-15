@@ -15,7 +15,6 @@ const getTravels = async (req, res) => {
         }
         const travelData = [{}]
         for (i = 0; i < travel.length; i++) {
-            console.log(travel[i], "travelInfo")
             const country = await Country.findById(travel[i].country)
             const citiesAndDays = await TravelCities.find({ travel: travel[i]._id })
             const cities = [{}]
@@ -37,7 +36,6 @@ const getTravels = async (req, res) => {
             }
         }
 
-        console.log(travel, "travelInfo2")
         res.status(200).json(travelData)
     } catch (error) {
         res.status(500).json({ message: error.message })

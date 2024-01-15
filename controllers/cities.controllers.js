@@ -4,7 +4,6 @@ const getCountry = async (req, res) => {
     try {
         const cities = await City.find({ country: req.params.id })
         res.json(cities)
-        console.log("hola")
     } catch (error) {
         res.status(500).json({ message: error.message })
     }

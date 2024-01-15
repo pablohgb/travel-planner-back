@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 
 function authenticateToken(req, res, next) {
-    console.log("jeje")
 
     const authHeader = req.body.token;
     const token = authHeader;
@@ -20,7 +19,6 @@ function authenticateToken(req, res, next) {
 function authenticateTokenParams(req, res, next) {
     const authHeader = req.params.token;
     const token = authHeader;
-    console.log("jeje")
     if (token == null) {
         return res.sendStatus(401);
     }
@@ -43,7 +41,6 @@ async function getUser(req, res, next) {
         return res.status(500).json({ message: error.message })
     }
     res.user = user;
-    console.log(user)
     next();
 }
 

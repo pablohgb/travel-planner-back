@@ -21,7 +21,6 @@ const getOneUser = (req, res) => {
 const loginUser = async (req, res) => {
     const email = req.body.email
     const user = await User.findOne({ email: email })
-    console.log(user)
     if (!user) {
         return res.status(404).json({ message: 'User not found' });
     }
@@ -29,10 +28,8 @@ const loginUser = async (req, res) => {
         if (await bcrypt.compare(req.body.password, user.password)) {
             userData = { id: user._id, email: user.email }
             const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET)
-            console.log(accessToken)
             res.status(200).send(accessToken)
         } else {
-            console.log("funciona")
             res.status(401).send("email or password incorrect")
         }
     } catch (error) {
@@ -60,7 +57,6 @@ const registerUser = async (req, res) => {
         const newUser = await user.save()
         userData = { id: user._id, email: user.email }
         const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET)
-        console.log(accessToken)
         res.status(200).json(accessToken)
     } catch (error) {
         res.status(400).json({ message: error.message })
